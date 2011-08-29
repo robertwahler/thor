@@ -5,6 +5,7 @@ require 'thor/rake_compat'
 
 class Default < Thor
   include Thor::RakeCompat
+  require 'bundler'
   Bundler::GemHelper.install_tasks
 
   desc "build", "Build thor-#{Thor::VERSION}.gem into the pkg directory"
